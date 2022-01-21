@@ -24,7 +24,7 @@ import javax.swing.SwingWorker;
 
 import com.pesterenan.removedor.utils.Processo;
 
-class RemovedorImperfeicoes extends SwingWorker<BufferedImage, String> implements MouseListener {
+public class RemovedorImperfeicoes extends SwingWorker<BufferedImage, String> implements MouseListener {
 
 	private Robot robo = new Robot();
 	private BufferedImage imagem;
@@ -36,13 +36,13 @@ class RemovedorImperfeicoes extends SwingWorker<BufferedImage, String> implement
 	private Processo processo;
 	public ArrayList<ArrayList<ArrayList<Color>>> padroes3px = new ArrayList<ArrayList<ArrayList<Color>>>();
 	public ArrayList<ArrayList<ArrayList<Color>>> padroes3pxInv = new ArrayList<ArrayList<ArrayList<Color>>>();
-	boolean limpar3px = false;
+	public boolean limpar3px = false;
 	public ArrayList<ArrayList<ArrayList<Color>>> padroes4px = new ArrayList<ArrayList<ArrayList<Color>>>();
 	public ArrayList<ArrayList<ArrayList<Color>>> padroes4pxInv = new ArrayList<ArrayList<ArrayList<Color>>>();
-	boolean limpar4px = false;
+	public boolean limpar4px = false;
 	public ArrayList<ArrayList<ArrayList<Color>>> padroes5px = new ArrayList<ArrayList<ArrayList<Color>>>();
 	public ArrayList<ArrayList<ArrayList<Color>>> padroes5pxInv = new ArrayList<ArrayList<ArrayList<Color>>>();
-	boolean limpar5px = true;
+	public boolean limpar5px = true;
 
 	public RemovedorImperfeicoes() throws AWTException {
 		importarPadroes();
@@ -255,16 +255,16 @@ class RemovedorImperfeicoes extends SwingWorker<BufferedImage, String> implement
 		}
 	}
 
-	void setImagem(BufferedImage imagem) {
+	public void setImagem(BufferedImage imagem) {
 		this.imagem = imagem;
 	}
 
-	void setProcesso(Processo proc) {
+	public void setProcesso(Processo proc) {
 		this.processo = proc;
 	}
 
 	@Override
-	protected BufferedImage doInBackground() throws Exception {
+	public BufferedImage doInBackground() throws Exception {
 		setProgress(0);
 		listaCoresImagem = importarImagem(imagem);
 		switch (processo) {

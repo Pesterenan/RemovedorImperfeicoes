@@ -28,7 +28,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-import javax.swing.SwingUtilities;
+
+import com.pesterenan.removedor.utils.Processo;
+import com.pesterenan.removedor.utils.TransferableImage;
+import com.pesterenan.removedor.app.RemovedorImperfeicoes;
 
 class InterfaceUsuario extends JFrame implements ActionListener, PropertyChangeListener, ItemListener {
 	private static final long serialVersionUID = 1L;
@@ -57,14 +60,14 @@ class InterfaceUsuario extends JFrame implements ActionListener, PropertyChangeL
 
 	private Dimension tamanhoDaTela = Toolkit.getDefaultToolkit().getScreenSize();
 
-	public static void main(String[] args) throws IOException, AWTException, InterruptedException {
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				IU = new InterfaceUsuario();
-			}
-		});
-	}
+//	public static void main(String[] args) throws IOException, AWTException, InterruptedException {
+//		SwingUtilities.invokeLater(new Runnable() {
+//			@Override
+//			public void run() {
+//				IU = new InterfaceUsuario();
+//			}
+//		});
+//	}
 
 	public InterfaceUsuario() {
 		try {
