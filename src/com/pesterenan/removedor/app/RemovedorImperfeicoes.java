@@ -22,7 +22,8 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.SwingWorker;
 
-import com.pesterenan.removedor.utils.Processo;
+import com.pesterenan.removedor.utils.Processos;
+import com.pesterenan.removedor.utils.Processos.Processo;
 
 public class RemovedorImperfeicoes extends SwingWorker<BufferedImage, String> implements MouseListener {
 
@@ -259,8 +260,8 @@ public class RemovedorImperfeicoes extends SwingWorker<BufferedImage, String> im
 		this.imagem = imagem;
 	}
 
-	public void setProcesso(Processo proc) {
-		this.processo = proc;
+	public void setProcesso(Processo limpar) {
+		this.processo = limpar;
 	}
 
 	@Override

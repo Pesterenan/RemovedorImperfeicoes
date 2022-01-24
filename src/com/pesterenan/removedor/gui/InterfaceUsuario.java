@@ -29,9 +29,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-import com.pesterenan.removedor.utils.Processo;
-import com.pesterenan.removedor.utils.TransferableImage;
 import com.pesterenan.removedor.app.RemovedorImperfeicoes;
+import com.pesterenan.removedor.utils.Processos.Processo;
+import com.pesterenan.removedor.utils.TransferableImage;
 
 class InterfaceUsuario extends JFrame implements ActionListener, PropertyChangeListener, ItemListener {
 	private static final long serialVersionUID = 1L;
